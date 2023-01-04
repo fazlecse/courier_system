@@ -33,9 +33,9 @@ $(document).ready(function () {
         loop: true,
         autoplay: true,
         center: true,
-        margin: 30,
-        nav: false,
-        dots: true,
+        margin: 20,
+        nav: true,
+        dots: false,
         // rtl:true,
         responsive: {
             0: {
