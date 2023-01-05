@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier System</title>
+    <!-- Fontawesome_Js_link -->
+    <script src="assets/js/fontawesomepro.js"></script>
+    <!-- Bootstrap_Css_link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl_carousel_Css_link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Fancybox_Css_link -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloder_function()" class="">
+    <!-- preloader_area_start -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <!-- preloader_area_end -->
+
+
+    <!-- Nav_area_start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container custom_nav shadow1">
+            <a class="logo" href="#"><img src="assets/images/logo/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="bars"><i class="fal fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto text-center align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Service</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tracking.html">Tracking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shipment_calculatior.html">Shipment Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="login_btn" href="login.html"><i class="far fa-user"></i> Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav_area_end -->
+
+    <!-- banner_area_start -->
+    <div class="banner_area">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 ">
+                    <div class="breadcrumb_area">
+                        <h3>Shipment Calculator</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home-1.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Shipment Calculator</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner_area_end -->
+
+    <!-- tracking_area_start -->
+    <section class="tracking_id_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="tracking_inner text-center">
+                        <div class="icon_area">
+                            <i class="fad fa-search-location"></i>
+                        </div>
+                        <h3 class="mb-15">Tracking Shipment</h3>
+                        
+                        <form>
+                            <label for="exampleInputEmail1" class="form-label"><h5>Enter your tracking code</h5></label>
+                            <div class="mb-3 position-relative d-flex align-items-center">
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Percel Id">
+                                <button type="submit" class="cmn_btn">Search</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="tracking_area">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-2 box">
+                    <div class="cmn_box3 text-center">
+                        <div class="icon_area mx-auto">
+                            <i class="far fa-shopping-cart"></i>
+                        </div>
+                        <h5>Confirmed Order</h5>
+                    </div>
+                </div>
+                <div class="col-md-2 box">
+                    <div class="cmn_box3 text-center">
+                        <div class="icon_area mx-auto">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                        <h5>Processing Order</h5>
+                    </div>
+                </div>
+                <div class="col-md-2 box">
+                    <div class="cmn_box3 text-center">
+                        <div class="icon_area mx-auto">
+                            <i class="far fa-box-check"></i>
+                        </div>
+                        <h5>Order Shipped</h5>
+                    </div>
+                </div>
+                <div class="col-md-2 box">
+                    <div class="cmn_box3 text-center">
+                        <div class="icon_area mx-auto">
+                            <i class="fal fa-truck"></i>
+                        </div>
+                        <h5>Order En Route</h5>
+                    </div>
+                </div>
+                <div class="col-md-2 box">
+                    <div class="cmn_box3 text-center">
+                        <div class="icon_area mx-auto">
+                            <i class="fal fa-home"></i>
+                        </div>
+                        <h5>Confiemed Order</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- tracking_area_end -->
+
+    <!-- shipment_details_area_start -->
+    <section class="shipment_info_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="estmated_delivery shadow3 text-center">
+                        <div class="icon_area">
+                            <i class="fal fa-check-circle"></i>
+                        </div>
+                        <h5>Estmate Delivery</h5>
+                        <h5>August 15, 2023</h5>
+                        <div class="btn_area mt-25">
+                            <a href="" class="cmn_btn">Ready For Pickup</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="shipment_details_area shadow3 text-center">
+                        <div class="section_subtitle mb-50">
+                            <h4>Shipment Details</h4>
+                        </div>
+                        <div class="table_area d-flex text-start">
+                            <ul>
+                                <li><h5>Shipment Number</h5></li>
+                                <li><h5>Shipment Received</h5></li>
+                                <li><h5>Location</h5></li>
+                            </ul>
+                            <ul>
+                                <li><h5>: #15456</h5></li>
+                                <li><h5>: 19th Feb, 2023 - 22:30 PM</h5></li>
+                                <li><h5>: Dhaka, Bangladesh</h5></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- shipment_details_area_end -->
+
+    
+
+    <!-- footer_start -->
+    <section class="footer_area">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer_widget">
+                        <div class="widget_logo mb-30">
+                            <a href="#nav_area" class="site_logo"><img src="assets/images/logo/footer-logo.png" alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit excepturi, natus voluptate commodi qui sunt quisquam cupiditate molestiae?</p>
+                        <div class="social_area mt-50">
+                            <ul class="d-flex">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer_widget">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="contact.html">Home</a></li>
+                            <li><a href="faq.html">About</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer_widget">
+                        <h5>Categories</h5>
+                        <ul>
+                            <li><a href="api_docs.html">Express</a></li>
+                            <li><a href="terms_&_condition.html">Material</a></li>
+                            <li><a href="privacy Policy.html">Furniture</a></li>
+                            <li><a href="refund Policy.html">Vehicle</a></li>
+                            <li><a href="general.html">Commodity</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer_widget">
+                        <h5>Newsletter</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nihil debitis</p>
+                        <form action="">
+                            <div class="col">
+                                <input type="email" class="form-control" id="inputEmail4">
+                                <button type="submit" class="cmn_btn w-100">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer_end -->
+    <!-- copy_right_area_start -->
+    <div class="copy_right_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Copyright © 2023 Courier System All Rights Reserved</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="language text-end">
+                        <a href="" class="language">English</a>
+                        <a href="" class="language">Spanish</a>
+                        <a href="" class="language">Germany</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- copy_right_area_end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="#" class="scroll_up">
+        <i class="fal fa-chevron-double-up"></i>
+     </a>
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- waypoints_Js_link -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- scrollUp_Js_link -->
+    <script src="assets/js/jquery.scrollUp.min.js"></script>
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- counterup_Js_link -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- fancybox_Js_link -->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,16 +1,17 @@
+
 // add bg to nav
-window.addEventListener("scroll", function () {
-    let scrollpos = window.scrollY;
-    const header = document.querySelector("nav");
-    const headerHeight = header.offsetHeight;
+// window.addEventListener("scroll", function () {
+//     let scrollpos = window.scrollY;
+//     const header = document.querySelector("nav");
+//     const headerHeight = header.offsetHeight;
  
-    if (scrollpos >= headerHeight) {
-       header.classList.add("active");
-    } else {
-       header.classList.remove("active");
-    }
-    // console.log(scrollpos);
- });
+//     if (scrollpos >= headerHeight) {
+//        header.classList.add("active");
+//     } else {
+//        header.classList.remove("active");
+//     }
+//     // console.log(scrollpos);
+//  });
 // // preloader_area
 var preloader = document.getElementById("preloader");
 function preloder_function(){
