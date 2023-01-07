@@ -1225,6 +1225,19 @@ section{
 /* service_page_modal_end */
 
 /* BLOG_DETAILS_PAGE_START */
+.blog_details .thum_inner{
+    position: relative;
+}
+.blog_details .date {
+    position: absolute;
+    width: 80px;
+    height: 90px;
+    background: var(--theme_color);
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    padding: 15px 5px 15px 5px;
+}
 .blog_details .blog_image img {
     width: 100%;
     max-height: 490px;
@@ -1243,8 +1256,12 @@ section{
 .blog_sidebar .section_header{
     margin-bottom: 30px;
 }
+.blog_sidebar {
+    padding: 25px;
+    background: #FAFAFA;
+}
 .blog_sidebar .search_area {
-    border: 1px solid var(--border1);
+    border: 1px solid var(--theme_color);
     padding: 0;
     margin-bottom: 60px;
     border-radius: 0;
@@ -1252,8 +1269,7 @@ section{
 .blog_sidebar .form-control {
     height: 50px;
     background-color: var(--white);
-    border: 1px solid var(--border_color1);
-    border-radius: 10px !important;
+    border: none;
 }
 .blog_sidebar .input-group-text {
     font-size: 25px;
@@ -1263,7 +1279,7 @@ section{
     border-radius: 0;
     display: flex;
     justify-content: center;
-    background: transparent;
+    background: var(--white);
 }
 .blog_sidebar input[type="text"]:focus {
     border: none;
@@ -1271,11 +1287,7 @@ section{
 .blog_sidebar .blog_widget_area {
     background-color: var(--white);
     margin: 20px 0;
-    border-bottom: 1px solid var(--border1);
-    padding-bottom: 20px;
-}
-.blog_widget_area a:hover{
-    color: var(--theme_color) !important;
+    padding: 20px;
 }
 .blog_date{
     transition: all .3s ease-in-out;
@@ -1292,29 +1304,42 @@ section{
     width: 70%;
 }
 .blog_details_area .blog_widget_content .blog_title {
+    font-size: 18px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     transition: all ease .3s;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--heading_color);
+}
+.categories_area{
+    padding: 20px;
+    background: var(--white);
 }
 .blog_details_area .categories_area li{
-    border-bottom: 1px solid var(--border1);
+    border-bottom: 1px solid var(--border_color1);
     padding-bottom: 10px;
 }
 .blog_details_area .categories_area li a {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    color: var(--heading_color);
 }
-/* .blog_details_area .categories_area li a span:last-child{
-    font-size: 22px;
-} */
 .blog_details_area .categories_area li a:hover{
     color: var(--theme_color) !important;
 }
 
 /* pagination_area */
+.pagination_area .page-link:focus{
+    background-color: transparent;
+    outline: 0;
+    box-shadow: none;
+}
 .pagination_area ul li a {
     width: 45px;
     height: 45px;
@@ -1330,9 +1355,10 @@ section{
 .pagination_area ul li i{
     display: flex;
 }
-.pagination_area ul li a:hover{
+.pagination_area ul li a:hover {
     background-color: var(--theme_color);
-    color : var(--white) !important;
+    color: var(--white) !important;
+    border: 1px solid var(--theme_color);
 }
 .pagination_area ul li a{
     box-shadow: none;
@@ -1345,25 +1371,8 @@ section{
 /* BLOG_DETAILS_PAGE_END */
 
 /* CONTACT_PAGE_START */
-.contact_page .section_header h3{
-    max-width: 500px;
-    margin-bottom: 25px;
-}
-.contact_area{
-    padding-top: 20px;
-}
-.contact_area .section_subtitle {
-    padding-left: 20px;
-}
-.contact_area .section_subtitle::before{
-    left: 0px;
-}
-.contact_area p{
- max-width: 500px;
-}
 .contact_message_area {
-    background: var(--bg_color1);
-    padding: 20px;
+    padding: 20px 0;
     border-radius: 10px;
 }
 .contact_message_area .form-control{
@@ -1376,6 +1385,38 @@ section{
     border-bottom: 1px solid var(--theme_color);
 
 }
+.contact_bottom {
+    background: var(--bg_color1);
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    padding-bottom: 150px;
+}
+.cmn_contact_box {
+    padding: 60px 30px 40px 30px;
+    background: #062233;
+    border-radius: 10px;
+    margin-top: -95px;
+    position: relative;
+}
+.cmn_contact_box .icon_area {
+    position: absolute;
+    top: -30px;
+}
+.cmn_contact_box h4{
+    color: white;
+    font-weight: 700;
+}
+.cmn_contact_box p {
+    color: #D8D8D8;
+    font-weight: 600;
+}
+.cmn_contact_box .icon_area i {
+    font-size: 30px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 16px;
+    background: var(--theme_color);
+    color: var(--white);
+}
 .map_area {
     margin-bottom: -15px;
 }
@@ -1383,21 +1424,10 @@ section{
 /* CONTACT_PAGE_END */
 
 /* LOGIN_SIGNUP_PAGE_START */
-.login_signup_page {
-    background: url(../images/login/3d-business-young-woman-sitting-with-a-laptop-and-waving-her-hand.png);
-    background-repeat: no-repeat;
-    background-position: 35% 90%;
-    background-size: 15%;
-}
-
-.login_signup_form{
-    background: var(--bg_color1);
-}
 .login_signup_logo{
     max-width: 250px;
 }
 .login_signup_page .form-control {
-    background: var(--bg_color1);
     border: none;
     border-bottom: 1px solid var(--theme_color);
     border-radius: 0;
