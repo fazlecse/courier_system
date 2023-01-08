@@ -85,15 +85,15 @@ $(document).ready(function () {
         time: 1000
     });
 
- // scroll_up
- $(".scroll_up").fadeOut();
- $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-       $(".scroll_up").fadeIn();
-    } else {
-       $(".scroll_up").fadeOut();
-    }
- });
+    // scroll_up
+    $(".scroll_up").fadeOut();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $(".scroll_up").fadeIn();
+        } else {
+            $(".scroll_up").fadeOut();
+        }
+    });
 
 
 

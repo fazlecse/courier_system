@@ -5,12 +5,8 @@
     --heading_color: #000000;
     --paragraph_color: #696687;
     --bg_color1: #253138;
-    --linear_bg1: linear-gradient(145deg, #fe5268 0,#fb6738 100%);
-    --linear_bg2: linear-gradient(90deg, #fe5268 0%, #fb6738 100%);
-    --linear_bg3: linear-gradient(90deg, #fb6738 0%, #fe5268 100%);
     --white:#ffffff;
-    --strong_blue: #223cbf;
-    --moderate_violet: #8037c6;
+    --lime_green: #1dc570;
     --body_color:#777777;
     --border_color1: #e0e0e0;
 }
@@ -117,6 +113,7 @@
     justify-content: center;
     align-items: center;
 }
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
@@ -298,6 +295,9 @@ figure{
 .highlight{
     color: var(--theme_color);
 }
+.bg_highlight{
+    background :var(--theme_color) !important;
+}
 .cmn_btn {
     font-size: 12px;
     background: #14212a;
@@ -358,15 +358,11 @@ figure{
     background: var(--black);
     border: 1px solid var(--theme_color);
 }
-.cmn_box2 .image_area{
-    /* width: 60px; */
-}
 .cmn_box2 i {
     margin-right: 20px;
     font-size: 60px;
     color: var(--theme_color);
 }
-
 .video_play_btn {
     position: absolute;
     top: 50%;
@@ -437,6 +433,9 @@ section{
 }
 .star ul li:not(:last-child){
     margin-right: 5px;
+}
+.opacity{
+    opacity: .5;
 }
 /* reusable_style_end */
 
@@ -1119,7 +1118,7 @@ section{
 .cmn_box3 .icon_area{
    position: relative; 
 }
-.cmn_box3 .icon_area::after {
+.cmn_box3 .icon_area::before {
     position: absolute;
     content: "";
     height: 2px;
@@ -1127,10 +1126,17 @@ section{
     background: var(--theme_color);
     top: 50%;
     transform: translateY(-50%);
-    left: 100%;
+    right: 100%;
+    z-index: -1;
 }
-.tracking_area .box:last-child .icon_area::after {
+.tracking_area .box:first-child .icon_area::before {
    width: 0;
+}
+.tracking_area .box:last-child .icon_area {
+   background: var(--body_color);
+}
+.tracking_area .box:last-child .icon_area::before {
+   background: var(--body_color);
 }
 .estmated_delivery {
     padding: 40px;
@@ -1139,11 +1145,11 @@ section{
 }
 .estmated_delivery .icon_area i{
     font-size: 60px;
-    color: #00A652;
+    color: var(--lime_green);
     margin-bottom: 30px;
 }
 .estmated_delivery .cmn_btn {
-    background: #00A652;
+    background: var(--lime_green);
     font-size: 16px;
 }
 .estmated_delivery .cmn_btn:hover {
@@ -1167,62 +1173,99 @@ section{
 .shipment_details_area ul:last-child{
     margin-left: 80px;
 }
-/* tracking_page_end */
-
-/* service_page_modal_start */
-.modal .modal-content {
-    border-radius: 10px;
-    height: 100%;
-    text-align: center;
-    border: none;
-    padding: 10px 5px;
-}
-.modal .modal-content h5{
-    font-size: 20px;
-}
-.modal .modal-content p{
-    text-align: left;
-}
-.modal .modal-content button {
-    background: transparent;
-    border: none;
-    font-size: 22px;
-    color: var(--theme_color);
-}
-.modal{
-    color: var(--black);
-}
-.modal .modal-header .btn-close{
-    background: none;
+.shipment_full_details_area tbody, td, tfoot, th, thead, tr{
     border: none;
 }
-.modal .modal-header .btn-close img{
-   width: 24px;
-}
-.btn-close{
-    width: auto;
-    height: auto;
-}
-.modal .modal-body .custom_btn {
-    padding: 10px 20px;
+.shipment_full_details_area .table thead tr th {
     font-size: 20px;
     background: var(--theme_color);
-    color: var(--white);
-    border: 1px solid var(--theme_color);
 }
-.modal .modal-body .custom_btn:hover{
-    background: var(--color1);
-    color: var(--theme_color) !important;
-    border: 1px solid var(--theme_color);
+/* tracking_page_end */
+
+/* shipment_details_page_start */
+/* ride_details_area_start */
+.progress_box .number {
+    width: 60px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    background: var(--body_color);
+}
+/* ride_details_area_end */
+/* cmn_form_area_start */
+.cmn_form .section_header {
+    background: var(--theme_color);
+    padding: 10px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading_color);
+}
+.cmn_form .form-select, .cmn_form .form-control {
+    height: 50px;
+    border-radius: 5px;
+}
+.cmn_form .form-select:focus {
+    box-shadow: none;
+}
+.cmn_form .form-select:focus, .cmn_form .form-control:focus, .cmn_form .form-select:hover, .cmn_form .form-control:hover {
+    border-color: var(--theme_color);
+}
+.costing_box {
+    padding: 20px 0px;
+    position: relative;
+    color: var(--white);
+    background: var(--bg_color1);
+    border-radius: 5px;
+}
+.costing_box p {
+    color: var(--white);
+}
+.costing_box:last-child span {
+    font-size: 25px;
+    font-weight: 600;
+}
+.costing_box i{
+    font-size: 35px;
+    margin-bottom: 10px;
 }
 .form-select {
-    border: 1px solid var(--theme_color);
+    background-image: url(../images/shipment_calculator/downward-arrow.png);
+    background-repeat: no-repeat;
 }
-.form-select:focus{
+/* cmn_form_area_end */
+/* prev_next_btn_area_start */
+.prev_next_btn_area .cmn_btn {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+/* prev_next_btn_area_end */
+
+/* cmn_form_form2_area_start */
+
+.cmn_form.form2 .form-check-input:checked {
+    background-color: var(--theme_color);
+    border-color: var(--theme_color);
+}
+.cmn_form.form2 .form-check-input {
+    border-color: var(--theme_color);
+}
+.cmn_form.form2 .form-check-input:focus {
+    border-color: var(--theme_color);
     box-shadow: none;
-    border: 1px solid var(--theme_color);
 }
-/* service_page_modal_end */
+/* cmn_form_form2_area_end */
+/* shipment_success_icon_section_start */
+.shipment_success_icon_section .icon_area i {
+    font-size: 150px;
+    color: var(--lime_green);
+}
+/* shipment_success_icon_section_end */
+/* shipment_details_page_end */
 
 /* BLOG_DETAILS_PAGE_START */
 .blog_details .thum_inner{
