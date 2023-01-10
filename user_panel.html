@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courier System</title>
+    <!-- Fontawesome_Js_link -->
+    <script src="assets/js/fontawesomepro.js"></script>
+    <!-- Bootstrap_Css_link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl_carousel_Css_link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Fancybox_Css_link -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloder_function()" class="">
+    <!-- preloader_area_start -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <!-- preloader_area_end -->
+
+
+    <!-- user_panel_start -->
+    <div class="dashboard-wrapper">
+        <!-- sidebar -->
+        <div id="sidebar" class="">
+            <div class="sidebar-top">
+                <a class="navbar-brand" href="index.html"> <img src="assets/images/logo/logo.png" alt="" /></a>
+                <button class="sidebar-toggler d-md-none" onclick="toggleSideMenu()">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+            <div class="search_area">
+                <input type="text" class="form-control" placeholder="Tracking number">
+                <div class="icon_area">
+                    <i class="far fa-search"></i>
+                </div>
+
+            </div>
+            <ul class="main">
+                <li>
+                    <a class="active" href="user_panel.html"><i class="fal fa-th-large"></i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="edit_profile.html"><i class="fal fa-user-edit"></i>Edit Profile</a>
+                </li>
+               
+                <li>
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" href="#dropdownCollapsible" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fal fa-sign-out-alt"></i>Dropdown
+                    </a>
+                    <div class="collapse" id="dropdownCollapsible">
+                        <ul class="">
+                            <li>
+                                <a href="#"><i class="fal fa-th-large"></i>Dropdown 1</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-th-large"></i>Dropdown 2</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fal fa-th-large"></i>Dropdown 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><i class="fal fa-sign-out-alt"></i>Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- content -->
+        <div id="content">
+            <div class="overlay">
+                <!-- navbar -->
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html"> <img src="./img/icon/logo.png" alt="" /></a>
+    
+                        <button class="sidebar-toggler" onclick="toggleSideMenu()">
+                            <i class="far fa-bars"></i>
+                        </button>
+                        <div class="search_area">
+
+                        </div>
+                        <!-- navbar text -->
+                        
+                        <span class="navbar-text">
+                            <!-- notification panel -->
+                            <div class="notification-panel">
+                                <button class="dropdown-toggle">
+                                    <i class="fal fa-bell"></i>
+                                    <span class="count">3</span>
+                                </button>
+                                <ul class="notification-dropdown shadow3">
+                                    <div class="dropdown-box">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fal fa-bell"></i>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                    <span class="time">4 Hours ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fal fa-bell"></i>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                    <span class="time">6 Hours ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fal fa-bell"></i>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                    <span class="time">1 Day ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fal fa-bell"></i>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                    <span class="time">3 Days ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fal fa-bell"></i>
+                                                <div class="text">
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                    <span class="time">4 Days ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </div>
+                                    <div class="clear-all fixed-bottom">
+                                        <a href="">Clear all</a>
+                                    </div>
+                                </ul>
+                            </div>
+                            <!-- user panel -->
+                            <div class="user-panel">
+                                <span class="profile">
+                                    <img src="assets/images/user_panel/dashboard/profile.jpg" class="img-fluid" alt="" />
+                                </span>
+                                <ul class="user-dropdown shadow3">
+                                    <li>
+                                        <a href="profile.html"> <i class="fal fa-user"></i> Profile </a>
+                                    </li>
+                                    <li>
+                                        <a href=""> <i class="fal fa-key"></i> Change Password </a>
+                                    </li>
+                                    <li>
+                                        <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                </nav>
+    
+                <!-- main -->
+                <div class="container-fluid">
+                    <div class="main row">
+                        <div class="col-12">
+                            <!-- search area -->
+                            <div class="search-bar">
+                                <form action="">
+                                    <div class="row g-3 align-items-end">
+                                        <div class="input-box col-lg-3">
+                                            <label for="">Want to buy</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Buy</option>
+                                                <option value="1">Sell</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-box col-lg-3">
+                                            <label for="">Coin Type</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Subject</option>
+                                                <option value="1">USDT.TRC02</option>
+                                            </select>
+                                        </div>
+                                        
+                                        
+                                        <div class="input-box col-lg-3">
+                                            <label for="">Location</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Anywhere</option>
+                                                <option value="1">Afganistan</option>
+                                                <option value="2">Pakistan</option>
+                                                <option value="3">Uzbekistan</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-box col-lg-3">
+                                            <button class="cmn_btn w-100"><i class="fal fa-search"></i>
+                                                Filter</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            
+                            <div class="dashboard-box-wrapper">
+                                <div class="row">
+                                    <div class="col-10 mx-auto">
+                                        <div class="row g-4 mb-4">
+                                            <div class="col-xl-4 col-md-6 box">
+                                                <div class="dashboard-box">
+                                                    <i class="far fa-long-arrow-left"></i>
+                                                    <h2>48</h2>
+                                                    <h5>Outcome Percels</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-6 box">
+                                                <div class="dashboard-box">
+                                                    <i class="far fa-long-arrow-right"></i>
+                                                    <h2>12</h2>
+                                                    <h5>Income Percels</h5> 
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-6 box">
+                                                <div class="dashboard-box">
+                                                    <i class="fas fa-atom-alt"></i>
+                                                    <h2>30</h2>
+                                                    <h5>Bonus Point</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            
+    
+                            <!-- table -->
+                            <div class="table-parent table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">SL No.</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Delivery</th>
+                                            <th scope="col">Tracking Number</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="SL No.">1</td>
+                                            <td data-label="Date">
+                                                <span class="currency">
+                                                    22 April - 24 April
+                                                </span>
+                                            </td>
+                                            <td data-label="Status">
+                                                <span class="currency">
+                                                    In Delivery
+                                                </span>
+                                            </td>
+                                            <td data-label="Delivery">Dhl</td>
+                                            <td data-label="Tracking Number">PR1852454</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="SL No.">2</td>
+                                            <td data-label="Date">
+                                                <span class="currency">
+                                                    22 April - 24 April
+                                                </span>
+                                            </td>
+                                            <td data-label="Status">
+                                                <span class="currency">
+                                                    Delivering
+                                                </span>
+                                            </td>
+                                            <td data-label="Delivery">Dhl</td>
+                                            <td data-label="Tracking Number">PR1852454</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="SL No.">3</td>
+                                            <td data-label="Date">
+                                                <span class="currency">
+                                                    22 April - 24 April
+                                                </span>
+                                            </td>
+                                            <td data-label="Status">
+                                                <span class="currency">
+                                                    Deliverd
+                                                </span>
+                                            </td>
+                                            <td data-label="Delivery">Ups</td>
+                                            <td data-label="Tracking Number">PR6545651852454</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="SL No.">4</td>
+                                            <td data-label="Date">
+                                                <span class="currency">
+                                                    22 April - 24 April
+                                                </span>
+                                            </td>
+                                            <td data-label="Status">
+                                                <span class="currency">
+                                                    Deliverd
+                                                </span>
+                                            </td>
+                                            <td data-label="Delivery">Amazon</td>
+                                            <td data-label="Tracking Number">PR1852454</td>
+                                        </tr>
+
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pagination_area pt-50 pb-50">
+                                <nav aria-label="...">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"><i class="far fa-long-arrow-left"></i></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active" aria-current="page">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"><i class="far fa-long-arrow-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- user_panel_end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="#" class="scroll_up">
+        <i class="fal fa-chevron-double-up"></i>
+    </a>
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- waypoints_Js_link -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- scrollUp_Js_link -->
+    <script src="assets/js/jquery.scrollUp.min.js"></script>
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- counterup_Js_link -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- fancybox_Js_link -->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

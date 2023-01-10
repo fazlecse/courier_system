@@ -4,7 +4,7 @@
 //     let scrollpos = window.scrollY;
 //     const header = document.querySelector("nav");
 //     const headerHeight = header.offsetHeight;
- 
+
 //     if (scrollpos >= headerHeight) {
 //        header.classList.add("active");
 //     } else {
@@ -14,11 +14,13 @@
 //  });
 // // preloader_area
 var preloader = document.getElementById("preloader");
-function preloder_function(){
-    preloader.style.display= "none";
+function preloder_function() {
+    preloader.style.display = "none";
 }
 
 $(document).ready(function () {
+
+
     // faq_area_start
     $("button.accordion_title").click(function () {
         $(this).next().slideToggle();
@@ -102,7 +104,40 @@ $(document).ready(function () {
 
 
 
-    
+
 
 });
+
+// dashboard_toggle_sidemenu
+const toggleSideMenu = () => {
+    document.getElementById("sidebar").classList.toggle("active");
+    document.getElementById("content").classList.toggle("active");
+};
+const hideSidebar = () => {
+    document.getElementById("formWrapper").classList.remove("active");
+    document.getElementById("formWrapper2").classList.remove("active");
+};
+
+// tab
+const tabs = document.getElementsByClassName("tab");
+const contents = document.getElementsByClassName("content");
+for (const element of tabs) {
+   const tabId = element.getAttribute("tab-id");
+   const content = document.getElementById(tabId);
+   element.addEventListener("click", () => {
+      for (const t of tabs) {
+         t.classList.remove("active");
+      }
+      for (const c of contents) {
+         c.classList.remove("active");
+      }
+      element.classList.add("active");
+      content.classList.add("active");
+   });
+}
+
+// input file preview
+const previewImage = (id) => {
+   document.getElementById(id).src = URL.createObjectURL(event.target.files[0]);
+};
 
