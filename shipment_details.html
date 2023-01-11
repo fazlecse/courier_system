@@ -30,7 +30,7 @@
 
     <!-- Nav_area_start -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container custom_nav shadow1">
+        <div class="container custom_nav shadow3 ">
             <a class="logo" href="#"><img src="assets/images/logo/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
                         <a class="nav-link" href="tracking.html">Tracking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shipment_calculatior.html">Shipment Calculator</a>
+                        <a class="nav-link" href="shipment_ride_details.html">Calculator</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -88,22 +88,22 @@
     <div class="ride_details_area pt-100 pb-30">
         <div class="progress_area">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="row gy-4 justify-content-center">
+                    <div class="col-md-4 col-sm-6">
                         <div class="progress_box text-center">
-                            <div class="number number1 mx-auto">1</div>
+                            <div class="number number1 bg_highlight mx-auto">1</div>
                             <h5>Enter Ride Details</h5>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-6">
                         <div class="progress_box text-center">
                             <div class="number number2 mx-auto">2</div>
                             <h5>Personal</h5>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-6">
                         <div class="progress_box text-center">
-                            <div class="number number3 bg_highlight mx-auto">3</div>
+                            <div class="number number3 mx-auto">3</div>
                             <h5>Shipment Details</h5>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             Shipment Details
                         </div>
                         <div class="row">
-                            <div class="col-6 mt-20">
+                            <div class="col-lg-6 mt-20">
                                 <label class="d-block">Shipment Type</label>
                         
                                 <div class="form-check">
@@ -141,7 +141,7 @@
                                 <label for="Shipping_Date">Shipping Date:</label>
                                 <input type="email" class="form-control" id="Shipping_Date" aria-describedby="emailHelp" placeholder="Shipping Date" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
-                            <div class="col-4 mt-20">
+                            <div class="col-md-4 col-sm-6 mt-20">
                                 <label>Branch:</label>
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>Select Country</option>
@@ -150,7 +150,7 @@
                                     <option value="3">Bangladesh</option>
                                 </select>
                             </div>
-                            <div class="col-4 mt-20">
+                            <div class="col-md-4 col-sm-6 mt-20">
                                 <label>Delivery Time:</label>
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>Select Country</option>
@@ -159,25 +159,25 @@
                                     <option value="3">Bangladesh</option>
                                 </select>
                             </div>
-                            <div class="col-4 mt-20">
+                            <div class="col-md-4 col-sm-6 mt-20">
                                 <label for="Amount_To_Be_Collected">Amount To Be Collected:</label>
                                 <input type="Amount_To_Be_Collected" class="form-control" id="Amount_To_Be_Collected" aria-describedby="emailHelp" placeholder="Amount To Be Collected:">
                             </div>
-                            <div class="col-4 mt-20">
+                            <div class="col-md-4 col-sm-6 mt-20">
                                 <label>Payment Type:</label>
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>Prepaid</option>
                                     <option value="1">Postpaid</option>
                                 </select>
                             </div>
-                            <div class="col-4 mt-20">
+                            <div class="col-md-4 col-sm-6 mt-20">
                                 <label>Payment Method:</label>
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>Cash Payment</option>
                                     <option value="1">Invoice Payment</option>
                                 </select>
                             </div>
-                            <div class="col-4 mt-20">
+                            <div class="col-md-4 col-sm-6 mt-20">
                                 <label for="Order_Id">Order Id:</label>
                                 <input type="email" class="form-control" id="Order_Id" aria-describedby="emailHelp" placeholder="Order Id">
                             </div>
@@ -186,7 +186,7 @@
                             Package Info
                         </div>
                         <div class="row">
-                            <div class="col-6 mt-20">
+                            <div class="col-sm-6 mt-20">
                                 <label>Package Type:</label>
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected>Clothes</option>
@@ -195,7 +195,7 @@
                                     <option value="1">hortfrut</option>
                                 </select>
                             </div>
-                            <div class="col-6 mt-20">
+                            <div class="col-sm-6 mt-20">
                                 <label for="Description">Description:</label>
                                 <input type="email" class="form-control" id="Description" aria-describedby="emailHelp" placeholder="Description">
                             </div>
@@ -203,23 +203,23 @@
 
                         </div>
                         <div class="row justify-content-between">
-                            <div class="col-2 mt-20">
+                            <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Quantity">Quantity:</label>
                                 <input type="text" class="form-control" id="Description" aria-describedby="emailHelp" placeholder="Quantityte" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
-                            <div class="col-2 mt-20">
+                            <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Weight">Weight:</label>
                                 <input type="text" class="form-control" id="Weight" aria-describedby="emailHelp" placeholder="Weight" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
-                            <div class="col-2 mt-20">
+                            <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Length">Length:</label>
                                 <input type="text" class="form-control" id="Length" aria-describedby="emailHelp" placeholder="Length" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
-                            <div class="col-2 mt-20">
+                            <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Width">Width:</label>
                                 <input type="text" class="form-control" id="Width" aria-describedby="emailHelp" placeholder="Width" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
-                            <div class="col-2 mt-20">
+                            <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Height">Height:</label>
                                 <input type="text" class="form-control" id="Height" aria-describedby="emailHelp" placeholder="Height" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
@@ -251,7 +251,7 @@
     <div class="shipment_success_icon_section mt-50 mb-100">
         <div class="container">
             <div class="row">
-                <div class="col-3 mx-auto">
+                <div class="col-sm-3  mx-auto">
                     <h3 class="text-center mb-30">Success !</h3>
                     <div class="icon_area justify-content-center d-flex">
                         <i class="far fa-check-circle"></i>

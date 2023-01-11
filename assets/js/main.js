@@ -34,7 +34,7 @@ $(document).ready(function () {
     // testimonial_area
     $('.testimonial_carousel').owlCarousel({
         loop: true,
-        autoplay: true,
+        autoplay: false,
         center: true,
         margin: 20,
         nav: true,
@@ -48,29 +48,10 @@ $(document).ready(function () {
                 items: 2
             },
             1000: {
-                items: 3
-            }
-        }
-    });
-
-    // plan_area payment_slider
-    $('.payment_slider').owlCarousel({
-        loop: true,
-        autoplay: false,
-        autoplayTimeout: 1000,
-        margin: 20,
-        nav: false,
-        dots: false,
-        // rtl:true,
-        responsive: {
-            0: {
-                items: 3
+                items: 2
             },
-            600: {
-                items: 6
-            },
-            1000: {
-                items: 8
+            1150: {
+                items: 3
             }
         }
     });
