@@ -12,24 +12,15 @@
 //     }
 //     // console.log(scrollpos);
 //  });
-// // preloader_area
+
+// preloader_area
 var preloader = document.getElementById("preloader");
 function preloder_function() {
     preloader.style.display = "none";
 }
 
+
 $(document).ready(function () {
-
-
-    // faq_area_start
-    $("button.accordion_title").click(function () {
-        $(this).next().slideToggle();
-        if (this.firstElementChild.classList.contains("fa-plus")) {
-            this.firstElementChild.classList.replace("fa-plus", "fa-minus");
-        } else {
-            this.firstElementChild.classList.replace("fa-minus", "fa-plus");
-        }
-    });
 
     // testimonial_area
     $('.testimonial_carousel').owlCarousel({
@@ -77,8 +68,6 @@ $(document).ready(function () {
             $(".scroll_up").fadeOut();
         }
     });
-
-
 
 
 

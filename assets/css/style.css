@@ -719,7 +719,7 @@ section {
 
 /* Hero_area_start */
 .hero_area {
-    padding: 350px 0 150px 0;
+    padding: 350px 0 200px 0;
     margin-top: -150px;
     background: url(../images/cmn_shape/overlay-bg-2.png);
     background-repeat: no-repeat;
@@ -1160,7 +1160,7 @@ section {
 
 /* banner_area_start */
 .banner_area {
-    background: url(../images/banner/title-bar-bg.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/banner/title-bar-bg.jpg);
     padding: 320px 0 150px 0;
     background-size: cover;
     background-position: center;
@@ -1638,7 +1638,7 @@ tr {
     padding: 60px 30px 40px 30px;
     background: #062233;
     border-radius: 10px;
-    margin-top: -95px;
+    margin-top: -130px;
     position: relative;
 }
 
@@ -1660,9 +1660,13 @@ tr {
 .cmn_contact_box .icon_area i {
     font-size: 30px;
     border-radius: 10px 10px 10px 10px;
-    padding: 16px;
     background: var(--theme_color);
     color: var(--white);
+    min-width: 55px;
+    min-height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .map_area {
@@ -1707,7 +1711,9 @@ tr {
     border-bottom: 1px solid var(--theme_color);
     border-radius: 0;
 }
-
+.form-select:focus{
+    box-shadow: none;
+}
 /* LOGIN_SIGNUP_PAGE_END */
 
 /*============================== Responsive_area_start ============================*/
@@ -1731,8 +1737,6 @@ tr {
     .testimonial_carousel {
         margin-bottom: 50px;
     }
-
-
 }
 @media (max-width: 1199px) {
     h1 {
@@ -1751,6 +1755,20 @@ tr {
     }
 }
 @media (max-width: 991px) {
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+    .navbar-toggler {
+        color: var(--theme_color);
+        border: 2px solid var(--theme_color);
+        border-radius: 4px;
+        height: 40px;
+        width: 46px;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .hero_area .image_area {
         display: none;
     }
@@ -1765,6 +1783,10 @@ tr {
         height: 55px;
         font-size: 25px
     }
+    .contact_bottom {
+        padding-bottom: 100px;
+    }
+
 
 }
 @media (max-width: 991px) {
@@ -1783,10 +1805,14 @@ tr {
         box-shadow: 0px 14px 20px 0px rgb(222 224 235 / 78%);
     }
     .navbar-nav{
-        padding: 20px;
+        padding: 25px;
     }
     .login_btn {
         margin-left: 0;
+    }
+    .cmn_contact_box {
+        padding: 50px 20px 30px 15px;
+
     }
 }
 
@@ -1884,6 +1910,17 @@ tr {
     .shipment_details_area ul:last-child {
         margin-left: 30px;
     }
+    .cmn_contact_box{
+        margin-top: 0;
+    }
+    .cmn_contact_box .icon_area {
+        right: 30px;
+        top: initial;
+    }
+    .contact_bottom {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 }
 @media (max-width: 575px){
     h1{
@@ -1906,6 +1943,10 @@ tr {
     }
     .banner_area {
         padding: 200px 0 40px 0;
+    }
+    .blog_details .date {
+        width: 60px;
+        height: 70px;
     }
 }
 @media (max-width: 420px){
@@ -1932,6 +1973,165 @@ tr {
 
 }
 /*============================== Responsive_area_end ============================*/
+/*============================== RTL_area_start ============================*/
+.rtl{
+    direction: rtl;
+}
+.rtl .navbar-nav{
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+.rtl .login_btn {
+    margin-left: 0;
+    margin-right: 30px;
+}
+.rtl .shape1 {
+    right: 35px;
+}
+.rtl .shape3 {
+    right: 365px;
+}
+.rtl .about_area .section_right .img2 img {
+    left: -155px !important;
+    right: auto;
+}
+.rtl .about_area .section_right::after {
+    right: 85px;
+}
+.rtl .cmn_box2 i {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.rtl .why_choose_us_area .image_area::before {
+    left: -50px;
+    right: auto;
+}
+.rtl .number {
+    margin-right: 0;
+    margin-left: 25px;
+}
+.rtl .testimonial_inner {
+    margin-left: -200px;
+}
+.rtl .testimonial_area .profile .image_area img {
+    margin-right: 0;
+    margin-left: 15px;
+}
+.rtl .testimonial_area .owl-theme .owl-nav {
+    left: auto;
+    right: 0;
+}
+.rtl .accordion-button::after {
+    margin-left: 0;
+    margin-right: auto;
+}
+.rtl .faq_area .accordion-button {
+    text-align: right;
+}
+.rtl .blog_box .date {
+    left: 0;
+    right: auto;
+}
+.rtl .blog_box .btn_area a i{
+    transform: rotate(180deg);
+}
+.rtl .footer_area .footer_widget h5::after{
+    right: 0;
+}
+.rtl .breadcrumb-item+.breadcrumb-item::before {
+    float: right;
+    padding-left: var(--bs-breadcrumb-item-padding-x);
+    transform: rotate(180deg);
+}
+.rtl .breadcrumb_area{
+    text-align: center;
+}
+.rtl .breadcrumb{
+    justify-content: center;
+}
+.rtl .cmn_box3 .icon_area::before{
+    left: 100%;
+    right: auto;
+}
+.rtl .tracking_id_area .cmn_btn {
+    left: 8px;
+    right: auto;
+}
+.rtl .tracking_id_area .form-control {
+    padding: 10px 20px 10px 175px;
+}
+.rtl .shipment_info_area .table_area {
+    text-align: right !important;
+}
+.rtl .shipment_details_area ul:last-child {
+    margin-left: 0;
+    margin-right: 80px;
+}
+.rtl .form-check .form-check-input {
+    float: right;
+    margin-left: 10px;
+}
+.rtl .section_subtitle::before {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.rtl .cmn_contact_box .icon_area {
+    left: 30px;
+    right: auto;
+}
+.rtl .contact_page .form_title {
+    text-align: right !important;
+}
+.rtl .blog_details .date{
+    left: 0;   
+    right: auto;
+}
+.rtl .blog_details_area .blog_header span i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.rtl .pagination_area ul li i {
+   transform: rotate(180deg);
+}
+.rtl .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: 0;
+}
+.rtl .blog_details_area .blog_widget_content {
+    margin-left: 0;
+    margin-right: 10px;
+}
+@media (max-width: 1399px){   
+    .rtl .testimonial_inner {
+        padding-right: 230px;
+        padding-left: 195px;
+    }
+}
+@media (max-width: 991px){   
+    .rtl .login_btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+@media (max-width: 767px){   
+    .rtl .testimonial_inner {
+        padding: 50px 210px;
+    }
+    .rtl .cmn_box3 .icon_area::before{
+        left: auto;
+    }
+    .rtl .tracking_area .icon_area {
+        margin-right: 0 !important;
+        margin-left: 20px !important;
+    }
+}
+@media (max-width: 420px){   
+    .rtl .tracking_id_area .form-control {
+        padding: 10px 20px 10px 115px;
+    }
+}
+/*============================== RTL_area_end ==============================*/
 
 /*=================================== user_panel_start ================================*/
 
@@ -2011,8 +2211,7 @@ tr {
 
 #sidebar {
     background: var(--white);
-    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
-    box-shadow: var(--shadow3);
+    box-shadow: var(--shadow4);
     position: fixed;
     width: 300px;
     height: 100%;
@@ -2060,11 +2259,14 @@ tr {
     position: absolute;
     right: 20px;
     top: 15px;
-    background: var(--primary);
+    background: var(--theme_color);
     color: var(--white);
     width: 35px;
     height: 35px;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #sidebar .sidebar-top .sidebar-toggler i {
@@ -2262,10 +2464,6 @@ tr {
     border-bottom-left-radius: 15px;
 }
 
-/* #sidebar ul li a.active, #sidebar ul li a:hover {
-    background: var(--primary);
-    color: var(--white);
-  } */
 #sidebar ul li a.active i,
 #sidebar ul li a:hover i {
     color: var(--theme_color);
