@@ -26,7 +26,7 @@ $(document).ready(function () {
     $('.testimonial_carousel').owlCarousel({
         loop: true,
         autoplay: false,
-        center: true,
+        // center: true,
         margin: 20,
         nav: true,
         dots: false,
