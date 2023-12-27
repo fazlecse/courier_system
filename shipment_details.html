@@ -23,7 +23,19 @@
 <body onload="preloder_function()" class="">
     <!-- preloader_area_start -->
     <div id="preloader">
-        <div id="loader"></div>
+        <div class="truck-wrapper">
+            <div class="truck">
+                <div class="truck-container"></div>
+                <div class="glases"></div>
+                <div class="bonet"></div>
+                <div class="base"></div>
+                <div class="base-aux"></div>
+                <div class="wheel-back"></div>
+                <div class="wheel-front"></div>
+
+                <div class="smoke"></div>
+            </div>
+        </div>
     </div>
     <!-- preloader_area_end -->
 
@@ -125,21 +137,27 @@
                         <div class="row">
                             <div class="col-lg-6 mt-20">
                                 <label class="d-block">Shipment Type</label>
-                        
+
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Pickup (for Door To Door Delivery)</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Pickup (for Door To Door
+                                        Delivery)</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Drop Off (for Delivery Package From Branch Directly)</label>
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Drop Off (for Delivery Package
+                                        From Branch Directly)</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 mt-20">
                                 <label for="Shipping_Date">Shipping Date:</label>
-                                <input type="email" class="form-control" id="Shipping_Date" aria-describedby="emailHelp" placeholder="Shipping Date" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                <input type="email" class="form-control" id="Shipping_Date" aria-describedby="emailHelp"
+                                    placeholder="Shipping Date"
+                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
                             <div class="col-md-4 col-sm-6 mt-20">
                                 <label>Branch:</label>
@@ -161,7 +179,8 @@
                             </div>
                             <div class="col-md-4 col-sm-6 mt-20">
                                 <label for="Amount_To_Be_Collected">Amount To Be Collected:</label>
-                                <input type="Amount_To_Be_Collected" class="form-control" id="Amount_To_Be_Collected" aria-describedby="emailHelp" placeholder="Amount To Be Collected:">
+                                <input type="Amount_To_Be_Collected" class="form-control" id="Amount_To_Be_Collected"
+                                    aria-describedby="emailHelp" placeholder="Amount To Be Collected:">
                             </div>
                             <div class="col-md-4 col-sm-6 mt-20">
                                 <label>Payment Type:</label>
@@ -179,7 +198,8 @@
                             </div>
                             <div class="col-md-4 col-sm-6 mt-20">
                                 <label for="Order_Id">Order Id:</label>
-                                <input type="email" class="form-control" id="Order_Id" aria-describedby="emailHelp" placeholder="Order Id">
+                                <input type="email" class="form-control" id="Order_Id" aria-describedby="emailHelp"
+                                    placeholder="Order Id">
                             </div>
                         </div>
                         <div class="section_header text-center mt-20 mb-20">
@@ -197,34 +217,41 @@
                             </div>
                             <div class="col-sm-6 mt-20">
                                 <label for="Description">Description:</label>
-                                <input type="email" class="form-control" id="Description" aria-describedby="emailHelp" placeholder="Description">
+                                <input type="email" class="form-control" id="Description" aria-describedby="emailHelp"
+                                    placeholder="Description">
                             </div>
-                            
+
 
                         </div>
                         <div class="row justify-content-between">
                             <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Quantity">Quantity:</label>
-                                <input type="text" class="form-control" id="Description" aria-describedby="emailHelp" placeholder="Quantityte" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                <input type="text" class="form-control" id="Description" aria-describedby="emailHelp"
+                                    placeholder="Quantityte"
+                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
                             <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Weight">Weight:</label>
-                                <input type="text" class="form-control" id="Weight" aria-describedby="emailHelp" placeholder="Weight" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                <input type="text" class="form-control" id="Weight" aria-describedby="emailHelp"
+                                    placeholder="Weight" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
                             <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Length">Length:</label>
-                                <input type="text" class="form-control" id="Length" aria-describedby="emailHelp" placeholder="Length" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                <input type="text" class="form-control" id="Length" aria-describedby="emailHelp"
+                                    placeholder="Length" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
                             <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Width">Width:</label>
-                                <input type="text" class="form-control" id="Width" aria-describedby="emailHelp" placeholder="Width" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                <input type="text" class="form-control" id="Width" aria-describedby="emailHelp"
+                                    placeholder="Width" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
                             <div class="col-md-2 col-sm-3 mt-20">
                                 <label for="Height">Height:</label>
-                                <input type="text" class="form-control" id="Height" aria-describedby="emailHelp" placeholder="Height" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
+                                <input type="text" class="form-control" id="Height" aria-describedby="emailHelp"
+                                    placeholder="Height" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
                             </div>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>
@@ -263,9 +290,9 @@
     </div>
     <!-- shipment_success_icon_section_end -->
 
-    
 
-    
+
+
 
     <!-- footer_start -->
     <section class="footer_area">
@@ -274,9 +301,11 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="footer_widget">
                         <div class="widget_logo mb-30">
-                            <a href="#nav_area" class="site_logo"><img src="assets/images/logo/footer-logo.png" alt=""></a>
+                            <a href="#nav_area" class="site_logo"><img src="assets/images/logo/footer-logo.png"
+                                    alt=""></a>
                         </div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit excepturi, natus voluptate commodi qui sunt quisquam cupiditate molestiae?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit excepturi,
+                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?</p>
                         <div class="social_area mt-50">
                             <ul class="d-flex">
                                 <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
